@@ -1,3 +1,6 @@
+// Grunt build for Colours CMS
+// https://github.com/horgen/grunt-builds/tree/master/colourscms
+
 module.exports = function(grunt) {
 
 	// CONFIGURATION

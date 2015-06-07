@@ -1,6 +1,5 @@
-/*
- * Based on http://24ways.org/2013/grunt-is-not-weird-and-hard/
- */
+// Grunt build with React, jQuery and Less
+// https://github.com/horgen/grunt-builds/tree/master/react
 
 module.exports = function(grunt) {
 

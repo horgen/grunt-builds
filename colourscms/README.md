@@ -1,4 +1,5 @@
-# Grunt build with React, jQuery and Less
+# Grunt build for Colours CMS
+https://github.com/horgen/grunt-builds
 
 ## Installation:
 
@@ -18,20 +19,22 @@ Info here
 
 ## File & Folder structure
 
-* **dist/**
-    * **src/**
-        * app.css *(Built by `grunt` and removed by `grunt prod`)*
-        * app.css.map *(Built by `grunt` and removed by `grunt prod`)*
-        * app.js *(Built by `grunt` and removed by `grunt prod`)*
-        * app.min.css *(Built by `grunt prod`)*
-        * app.min.js *(Built by `grunt prod`)*
-    * index.html *(Built by `grunt` and `grunt prod`)*
-    * **img/**
+* **css/**
+    * ckeditor-styles.css *(Built by `grunt` and `grunt prod`)*
+    * theme.css *(Built by `grunt` and `grunt prod`)*
+    * theme.css.map *(Built by `grunt` and removed by `grunt prod`)*
+* **fonts/**  *(Font Awesome added by copy task)*
+* **js/**
+    * theme.js *(Built by `grunt` and removed by `grunt prod`)*
+* **img/** (Gets optimized with grunt-contrib-imagemin)
 * **src/**
     * **js/**
-        * **jsx/**app.jsx
-        * app.js
+        * theme.js
     * **less/**
-        * app.less *(imports bower_components/normalize.css/normalize.css)*
-    * index.html
-* **tmp/build/** *(Temporary folder created by `grunt` and `grunt prod`)*
+        * bootstrap.less
+        * ckeditor-styles.less
+        * scaffolding.less
+        * theme.less (imports all other Less files)
+        * utilities.less
+        * variables.less
+* **build/** *(Temporary folder created by `grunt` and `grunt prod`)*
