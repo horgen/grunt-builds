@@ -1,0 +1,42 @@
+@import "bower_components/bootstrap/less/variables.less";
+@import "variables.less";
+@import "bower_components/bootstrap/less/mixins.less";
+@import "bower_components/bootstrap/less/normalize.less";
+
+.theme {
+	@import (less) "build/bootstrap.css";
+}
+
+// Body reset
+
+html, body, .theme * .theme *:before, .theme *:after {
+	.box-sizing(border-box);
+}
+
+html {
+	font-size: 62.5%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+.theme {
+	font-family: @font-family-base;
+	font-size: @font-size-base;
+	line-height: @line-height-base;
+	color: @text-color;
+	background-color: @body-bg;
+
+	@import "bower_components/font-awesome/less/font-awesome.less";
+
+	// @import "../../../../../../app/webroot/css/ccms/theme-global-defaults.less";
+
+	// Theme
+	@import "scaffolding.less";
+	@import "utilities.less";
+}

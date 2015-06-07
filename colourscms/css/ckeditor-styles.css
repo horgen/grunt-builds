@@ -1,0 +1,41 @@
+.cke_panel_list {
+  /**
+	 * CKEditor styles
+	 * Loaded after: /app/webroot/ckeditor/contents.css
+	 */
+}
+.cke_panel_list h1,
+.cke_panel_list h2,
+.cke_panel_list h3,
+.cke_panel_list h4,
+.cke_panel_list h5,
+.cke_panel_list h6 {
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+}
+.cke_panel_list h1 {
+  font-size: 36px;
+  line-height: 38px;
+}
+.cke_panel_list h2 {
+  font-size: 30px;
+  line-height: 32px;
+}
+.cke_panel_list h3 {
+  font-size: 24px;
+  line-height: 26px;
+}
+.cke_panel_list h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+.cke_panel_list h5 {
+  font-size: 14px;
+  line-height: 16px;
+}
+.cke_panel_list h6 {
+  font-size: 12px;
+  line-height: 14px;
+}
+/* End required scope */

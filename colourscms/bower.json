@@ -1,0 +1,10 @@
+{
+  "name": "ColoursCMSTheme",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "bootstrap": "~3.3.*",
+    "font-awesome": "~4.3.*"
+  },
+  "devDependencies": {}
+}
