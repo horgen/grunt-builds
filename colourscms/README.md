@@ -25,7 +25,7 @@ Info here
     * theme.css.map *(Built by `grunt` and removed by `grunt prod`)*
 * **fonts/**  *(Font Awesome added by copy task)*
 * **js/**
-    * theme.js *(Built by `grunt` and removed by `grunt prod`)*
+    * theme.js *(Built by `grunt` and `grunt prod`)*
 * **img/** (Gets optimized with grunt-contrib-imagemin)
 * **src/**
     * **js/**
