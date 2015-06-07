@@ -1,0 +1,10 @@
+# Global OSX ignores
+.DS_Store
+
+# Build
+tmp/
+bower_components/
+node_modules/
+dist/src/app.css
+dist/src/app.css.map
+dist/src/app.js
