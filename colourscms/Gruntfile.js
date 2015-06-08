@@ -133,10 +133,7 @@ module.exports = function(grunt) {
         },
 
         // https://github.com/gruntjs/grunt-contrib-clean
-		clean: [
-			'build',
-			'css/theme.css.map'
-		]
+		clean: ['build']
 	});
 
 	// Load plugins

@@ -22,7 +22,7 @@ Info here
 * **css/**
     * ckeditor-styles.css *(Built by `grunt` and `grunt prod`)*
     * theme.css *(Built by `grunt` and `grunt prod`)*
-    * theme.css.map *(Built by `grunt` and removed by `grunt prod`)*
+    * theme.css.map *(Built by `grunt`)*
 * **fonts/**  *(Font Awesome added by copy task)*
 * **js/**
     * theme.js *(Built by `grunt` and `grunt prod`)*
