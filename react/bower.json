@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "main": "Gruntfile.js",
   "dependencies": {
-    "react": "~0.13.*",
     "jquery": "~2.1.*",
     "normalize.css": "~3.0.*"
   },

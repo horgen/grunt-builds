@@ -1,5 +1,5 @@
-# Grunt build with React, jQuery and Less
-https://github.com/horgen/grunt-builds
+# Grunt build with React + Flux, jQuery and Less
+https://github.com/horgen/grunt-builds/tree/master/react
 
 ## Installation:
 

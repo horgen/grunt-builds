@@ -113,7 +113,6 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'bower_components/react/react-with-addons.js',
 					'bower_components/jquery/dist/jquery.js',
 					'tmp/build/app.jsx.js',
 					'src/js/app.js'
@@ -155,13 +154,12 @@ module.exports = function(grunt) {
             	tasks: ['copy'],
 			},
 			less: {
-				files: 'src/less/*.less',
+				files: 'src/less/**',
             	tasks: ['less'],
 			},
 			js: {
 				files: [
-					'src/js/app.js',
-					'src/js/jsx/*.jsx'
+					'src/js/**'
 				],
 				tasks: ['browserify:dev', 'concat']
 			}
@@ -199,7 +197,7 @@ module.exports = function(grunt) {
 		'browserify:dev',	// Compiles jsx to js and enables debug
 		'concat', 			// Combines all js files to dist/app.js
 		'browserSync',
-		'watch'				// Watches for changes in
+		'watch'				// Watches for changes in src/*.html, src/less/** and src/js/**
 	]);
 
 	grunt.registerTask('prod', [
