@@ -19,14 +19,15 @@ Info here
 
 ## File & Folder structure
 
-* **css/**
-    * ckeditor-styles.css *(Built by `grunt` and `grunt prod`)*
-    * theme.css *(Built by `grunt` and `grunt prod`)*
-    * theme.css.map *(Built by `grunt`)*
-* **fonts/**  *(Font Awesome added by copy task)*
-* **js/**
-    * theme.js *(Built by `grunt` and `grunt prod`)*
-* **img/** (Gets optimized with grunt-contrib-imagemin)
+* **webroot/**
+    * **css/**
+        * ckeditor-styles.css *(Built by `grunt` and `grunt prod`)*
+        * theme.css *(Built by `grunt` and `grunt prod`)*
+        * theme.css.map *(Built by `grunt`)*
+    * **fonts/**  *(Font Awesome added by copy task)*
+    * **js/**
+        * theme.js *(Built by `grunt` and `grunt prod`)*
+    * **img/** (Gets optimized with `grunt imagemin`)
 * **src/**
     * **js/**
         * theme.js
@@ -37,4 +38,4 @@ Info here
         * theme.less (imports all other Less files)
         * utilities.less
         * variables.less
-* **build/** *(Temporary folder created by `grunt` and `grunt prod`)*
+* **tmp/build/** *(Temporary folder created by `grunt` and `grunt prod`)*

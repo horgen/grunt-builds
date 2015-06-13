@@ -12,19 +12,19 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					sourceMap: true,
-					sourceMapFilename: 'css/theme.css.map'
+					sourceMapFilename: 'webroot/css/theme.css.map'
 				},
 				files: {
-					'build/bootstrap.css': 'src/less/bootstrap.less',
-					'css/theme.css': 'src/less/theme.less',
-					'css/ckeditor-styles.css': 'src/less/ckeditor-styles.less',
+					'tmp/build/bootstrap.css': 'src/less/bootstrap.less',
+					'webroot/css/theme.css': 'src/less/theme.less',
+					'webroot/css/ckeditor-styles.css': 'src/less/ckeditor-styles.less',
 				}
 			},
 			prod: {
 				files: {
-					'build/bootstrap.css': 'src/less/bootstrap.less',
-					'build/theme.css': 'src/less/theme.less',
-					'css/ckeditor-styles.css': 'src/less/ckeditor-styles.less',
+					'tmp/build/bootstrap.css': 'src/less/bootstrap.less',
+					'tmp/build/theme.css': 'src/less/theme.less',
+					'webroot/css/ckeditor-styles.css': 'src/less/ckeditor-styles.less',
 				}
 			}
 		},
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         	},
 			target: {
 				files: {
-					'css/theme.css': ['build/theme.css']
+					'webroot/css/theme.css': ['tmp/build/theme.css']
 				}
 			}
 		},
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 					'bower_components/bootstrap/js/transition.js',
 					'src/js/theme.js'
 				],
-				dest: 'build/theme.js',
+				dest: 'tmp/build/theme.js',
 				nonull: true
 			},
 		},
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 		uglify: {
 			dist: {
 				files: {
-					'js/theme.js': ['build/theme.js']
+					'webroot/js/theme.js': ['tmp/build/theme.js']
 				}
 			}
 		},
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 				src: [
 					'bower_components/font-awesome/fonts/*'
 				],
-    			dest: 'fonts/',
+    			dest: 'webroot/fonts/',
     			filter: 'isFile'
 			},
 			js: {
@@ -83,9 +83,9 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: true,
 						src: [
-							'build/theme.js'
+							'tmp/build/theme.js'
 							],
-						dest: 'js/'
+						dest: 'webroot/js/'
 					}
 				]
 			}
@@ -99,9 +99,9 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: 'img',
+					cwd: 'webroot/img/',
 					src: ['**/*.{png,jpg,gif}'],
-					dest: 'img/'
+					dest: 'webroot/img/'
 				}]
 			}
 		},
@@ -110,8 +110,8 @@ module.exports = function(grunt) {
 		browserSync: {
 			bsFiles: {
 				src : [
-					'css/theme.css',
-					'js/theme.js'
+					'webroot/css/theme.css',
+					'webroot/js/theme.js'
 				]
 			},
 			options: {
@@ -123,17 +123,17 @@ module.exports = function(grunt) {
 		// https://github.com/gruntjs/grunt-contrib-watch
 		watch: {
 			less: {
-				files: 'src/less/*.less',
+				files: 'src/less/**',
             	tasks: ['less'],
 			},
 			js: {
-				files: 'src/js/theme.js',
+				files: 'src/js/**',
 				tasks: ['concat', 'copy:js']
 			}
         },
 
         // https://github.com/gruntjs/grunt-contrib-clean
-		clean: ['build']
+		clean: ['tmp/build']
 	});
 
 	// Load plugins
@@ -150,21 +150,21 @@ module.exports = function(grunt) {
 
 	// Task to run when doing 'grunt' in terminal.
 	grunt.registerTask('default', [
-		'copy:fonts',		// Copy Font Awesome fonts to fonts/
-		'less:dev', 		// Compiles all Less files in src/less and outputs it in css/theme.css
-		'concat', 			// Combines all js files in src/js and outputs it to build/theme.js
-		'copy:js',			// Copies build/theme.js to css/theme.js
+		'copy:fonts',		// Copy Font Awesome fonts to /webroot/fonts/
+		'less:dev', 		// Compiles all Less files in /src/less and outputs it in /webroot/css/theme.css
+		'concat', 			// Combines all js files in /src/js and outputs it to /tmp/build/theme.js
+		'copy:js',			// Copies /tmp/build/theme.js to /webroot/css/theme.js
 		'browserSync',
-		'watch'				// Watches for changes in src/less/*.less and src/js/*.js
+		'watch'				// Watches for changes in /src/less/** and /src/js/**
 	]);
 
 	grunt.registerTask('prod', [
-		'copy:fonts', 		// Copy Font Awesome fonts to fonts/
-		'less:prod',		// Compiles all Less files in src/less and outputs it in build/theme.css
-		'cssmin',			// Minifies build/theme.css and outputs it in css/theme.css
-		'concat', 			// Combines all js files in src/js and outputs it to build/theme.js
-		'uglify',			// Minifies build/theme.js and outputs it to js/theme.js
-		'imagemin',			// Optimizes all images in img/
-		'clean',			// Removes build folders and files
+		'copy:fonts', 		// Copy Font Awesome fonts to /webroot/fonts/
+		'less:prod',		// Compiles all Less files in /src/less and outputs it in /tmp/build/theme.css
+		'cssmin',			// Minifies /tmp/build/theme.css and outputs it in /webroot/css/theme.css
+		'concat', 			// Combines all js files in /src/js and outputs it to /tmp/build/theme.js
+		'uglify',			// Minifies /tmp/build/theme.js and outputs it to /webroot/js/theme.js
+		'imagemin',			// Optimizes all images in /webroot/img/
+		'clean',			// Removes build folder and files
 		]);
 };
