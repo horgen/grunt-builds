@@ -1,5 +1,5 @@
-// Grunt build with React, jQuery and Less
-// https://github.com/horgen/grunt-builds/tree/master/react
+// Grunt build with Bootstrap 3.3.5 grid only
+// https://github.com/horgen/grunt-builds/tree/master/bootstrap-grid
 
 module.exports = function(grunt) {
 
