@@ -1,5 +1,5 @@
-# Grunt build for Colours CMS
-https://github.com/horgen/grunt-builds
+# Grunt build for Colours CMS (http://www.colourscms.no)
+https://github.com/horgen/grunt-builds/tree/master/colourscms
 
 ## Installation:
 
@@ -27,7 +27,7 @@ Info here
     * **fonts/**  *(Font Awesome added by copy task)*
     * **js/**
         * theme.js *(Built by `grunt` and `grunt prod`)*
-    * **img/** (Gets optimized with `grunt imagemin`)
+    * **img/** *(Optimized by `grunt prod`)*
 * **src/**
     * **js/**
         * theme.js

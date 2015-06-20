@@ -1,5 +1,5 @@
-# Grunt build with React + Flux, jQuery and Less
-https://github.com/horgen/grunt-builds/tree/master/react
+# Grunt build with Bootstrap 3.3.5 grid only
+https://github.com/horgen/grunt-builds/tree/master/bootstrap-grid
 
 ## Installation:
 
@@ -30,9 +30,10 @@ Info here
     * **img/** *(Optimized by `grunt prod`)*
 * **src/**
     * **js/**
-        * **jsx/**app.jsx
         * app.js
     * **less/**
-        * app.less *(imports bower_components/normalize.css/normalize.css)*
+        * app.less *(includes all files in this folder)*
+        * bootstrap.less *(includes Bootstrap grid)*
+        * scaffolding.less
+        * variables.less
     * index.html
-* **tmp/build/** *(Temporary folder created by `grunt` and `grunt prod`)*

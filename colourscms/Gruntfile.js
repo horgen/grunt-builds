@@ -99,9 +99,9 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: 'webroot/img/',
+					cwd: 'webroot/img',
 					src: ['**/*.{png,jpg,gif}'],
-					dest: 'webroot/img/'
+					dest: 'webroot/img'
 				}]
 			}
 		},

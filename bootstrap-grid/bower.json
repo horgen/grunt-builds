@@ -1,0 +1,9 @@
+{
+  "name": "BootstrapGridBuild",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

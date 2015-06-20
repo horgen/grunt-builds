@@ -1,0 +1,6 @@
+# Global OSX ignores
+.DS_Store
+
+# Build
+bower_components/
+node_modules/
